@@ -1,0 +1,18 @@
+Introducing a web app for Star Citizen enthusiasts that provides a comprehensive view of our organization's members and their ships.
+The app includes interactive widgets such as graphs, tables, and more to explore.
+
+Usability goals were set to create a user-friendly, easy-to-navigate platform that caters to both experienced and novice players. 
+The design process began with sketching out ideas and layouts, followed by implementing the design using Streamlit, Pandas, and Plotly.
+
+API integration was critical in retrieving data on the game's ships and members.
+The Star Citizen API was utilized to retrieve data, which was then parsed and displayed in various forms throughout the app.
+The integration process was relatively straightforward, with some challenges encountered when retrieving data that was empty,
+and with Streamlit re-running.
+
+Interactive widgets were incorporated to provide a more engaging experience for users.
+These widgets were simple and intuitive, allowing users to explore the data through graphs and tables.
+
+The app tries to adhere to various HCI design principles to ensure simplicity, consistency, and user feedback. 
+Usability testing was conducted, and feedback from users was incorporated into the design.
+
+In conclusion, the web app provides a user-friendly, engaging, and informative platform for Star Citizen enthusiasts, with potential to become an essential tool for the community.
