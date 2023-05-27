@@ -250,9 +250,19 @@ def add_style():
             background-attachment: fixed;
             background-size: cover;
             background-color: #f0f0f0;
-            color:black;
+            color: black;
+           
             
             
+        }}
+        .stTabs [data-baseweb="tab-highlight"] {{
+        background-color:transparent;
+        }}
+        .stCheckbox {{
+        background-color:lightblue;
+        }}
+        .stRadio {{
+        background-color:lightblue;
         }}
         </style>
         """,
@@ -262,8 +272,10 @@ def add_style():
 
 def main():
     add_style()
-    st.title("Star Citizen Helpers")
-    st.subheader("Tiza Space Group")
+    ##st.title()
+    st.markdown("# :blue[Star Citizen Helpers]")
+    st.markdown("## :blue[Tiza Space Group]")
+    #st.subheader("Tiza Space Group")
     my_char, game_info = st.tabs([
         "Members",
         "Game Information"
@@ -272,7 +284,8 @@ def main():
         get_mychar()
 
     with game_info:  # Include species, stats, ships
-        st.header("General Game Information")
+        st.header("")
+        st.markdown("### :blue[General Game Information]")
         species = st.checkbox("Species of The Galaxy")
         if species:
             get_species()
@@ -285,7 +298,8 @@ def main():
             data = {'lat': [53.47893720412131, 30.3096728399394, 34.03097237099766],
                     'lon': [-2.2558235729373206, -97.9393061157291, -118.45570880597623]}
             df = pd.DataFrame(data)
-            st.subheader("Office locations")
+            st.subheader("")
+            st.markdown("### :blue[Cloud Imperium Office locations]")
             st.map(df)
 
 
