@@ -295,12 +295,12 @@ def main():
         ships = st.checkbox("Some of the current available ships")
         if ships:
             get_ships()
-            data = {'lat': [53.47893720412131, 30.3096728399394, 34.03097237099766],
-                    'lon': [-2.2558235729373206, -97.9393061157291, -118.45570880597623]}
-            df = pd.DataFrame(data)
-            st.subheader("")
-            st.markdown("### :blue[Cloud Imperium Office locations]")
-            st.map(df)
+        data = {'lat': [53.47893720412131, 30.3096728399394, 34.03097237099766],
+                'lon': [-2.2558235729373206, -97.9393061157291, -118.45570880597623]}
+        df = pd.DataFrame(data)
+        st.subheader("")
+        st.markdown("### :blue[Cloud Imperium Office locations]")
+        st.map(df)
 
 
 if __name__ == '__main__':
