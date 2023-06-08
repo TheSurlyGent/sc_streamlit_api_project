@@ -13,7 +13,6 @@ mykey = apikey
 
 
 def get_ships():
-    # price = st.slider("select ship price",max_value=None,value=60)
 
     url3 = f"https://api.starcitizen-api.com/{mykey}/v1/live/ships?page_max=1?crew_max=1?"  # price_max={price}"
     headers = {
