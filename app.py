@@ -1,9 +1,11 @@
 import csv
 import pprint
+
 import pandas as pd
 import plotly.express as px
 import requests
 import streamlit as st
+
 from apikey import *
 
 # The api is free
@@ -61,7 +63,6 @@ def get_ships():
 
         if data_display == 'Table':
             st.dataframe(df)
-
 
     else:
         # Request was not successful
@@ -133,7 +134,8 @@ def get_mychar():
                      "exploring even the harshest environments.")
 
         if users == "Sentifer":
-            image_url = "https://media.starcitizen.tools/a/a4/Drake_Cutter_-_Flying_through_Area_18_-_ISC_2022-11-18.jpg"
+            image_url = "https://media.starcitizen.tools/a/a4/Drake_Cutter_-_Flying_through_Area_18_-_ISC_2022-11-18" \
+                        ".jpg"
             st.image(image_url, use_column_width="auto", caption="Drake Cutter")
             st.write("The Drake Cutter is a small but versatile single-seat starter ship perfect for fledgling "
                      "pilots. Its flexible frame is ideal for various roles, including FPS missions such as "
@@ -145,7 +147,7 @@ def get_mychar():
         if users == "Gollejo":
             image_url = "https://media.starcitizen.tools/5/59/Nomad_Flying_Concept.jpg"
             st.image(image_url, use_column_width="auto", caption="Consolidated Outlands Nomad")
-            st.write("Description: The Nomad, created by Consolidated Outland, "
+            st.write("Description: The Nomad, created by Consolidated Outlands, "
                      "is a versatile and innovative freighter that combines multiple features in a compact and "
                      "sleek design. With its spacious cargo bay, advanced hover technology, and cozy habitation "
                      "area, the Nomad is a prime example of self-reliance and ingenuity. The cargo bay's open "
@@ -234,7 +236,6 @@ def get_stats():
                            "funds": "Funds Raised"}, inplace=True)
         st.write(df)
 
-
     else:
         # Request was not successful
         st.warning(f"Request failed with status code {response.status_code}")
@@ -243,14 +244,9 @@ def get_stats():
 
 def add_style():
     st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("https://robertsspaceindustries.com/media/d6r27wy3vettyr/wallpaper_1920x1080/Source.jpg");
-            background-attachment: fixed;
-            background-size: cover;
-            background-color: #f0f0f0;
-            color: black;
+        f""" <style> .stApp {{ background-image: url(
+        "https://robertsspaceindustries.com/media/d6r27wy3vettyr/wallpaper_1920x1080/Source.jpg"); 
+        background-attachment: fixed; background-size: cover; background-color: #f0f0f0; color: black;
            
             
             
@@ -272,10 +268,10 @@ def add_style():
 
 def main():
     add_style()
-    ##st.title()
+
     st.markdown("# :blue[Star Citizen Helpers]")
     st.markdown("## :blue[Tiza Space Group]")
-    #st.subheader("Tiza Space Group")
+
     my_char, game_info = st.tabs([
         "Members",
         "Game Information"
